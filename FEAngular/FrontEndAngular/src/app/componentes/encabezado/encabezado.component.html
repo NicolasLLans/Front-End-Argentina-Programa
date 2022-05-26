@@ -1,0 +1,32 @@
+<!--Encabezado -->
+<section class="card  m-3 p-2" *ngFor="let Persona of personas">
+    <img src="../../../assets/banner.png" alt="Programación Full Stack">
+    <div>
+        <img [src]="Persona.fotoPerfil" id="FotoDePerfil" class="col-auto img-responsive p-2 rounded-circle"  alt="Nicolás Lanselota">
+        <button type="button"
+        class="btn"
+        (click)="editarTexto()">
+            <a><img src="../../../assets/bxs-edit-alt.svg" class="" alt=""></a>
+        </button>
+    </div>
+    <!-- modal de edicion-->
+    <div *ngIf="formVisibility">
+        <form (ngSubmit)="onSubmit(Persona)">
+                <input type="text" 
+                [(ngModel)]="Persona.fotoPerfil"
+                name="imagen"
+                placeholder="URL de la imagen"
+                class="form-control">
+                <button type="submit" class="btn m-1 btn-primary">
+                    Guardar cambios
+                </button>
+        </form>                  
+    </div>
+    
+    <H1 class="card-title m-2 mt-0">{{Persona.nombre}} {{Persona.apellido}}</H1>
+    <H5 class="m-2 mt-0">{{Persona.titulo}}</H5>
+
+    <p class="card-text m-2 mt-0">{{Persona.descripcion}} <a href="https://wa.me/+541122613168?text=Hola,%20muchos%20gusto.%20En%20que%20puedo%20ayudarte" target="_blank">informacion de contacto</a></p>
+</section>
+
+
