@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
@@ -14,6 +14,11 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModuleModule } from './material-module/material-module.module';
+import { LoginComponent } from './componentes/login/login.component';
+import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
+import { InterceptorService } from './servicios/interceptor.service';
+import { RegistroComponent } from './componentes/registro/registro.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +29,10 @@ import { MaterialModuleModule } from './material-module/material-module.module';
     ExperienciaComponent,
     EducacionComponent,
     SkillsComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    LoginComponent,
+    PorfolioComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +44,7 @@ import { MaterialModuleModule } from './material-module/material-module.module';
     BrowserAnimationsModule,
     MaterialModuleModule
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
