@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { AcercaDe } from '../models/acercaDe';
 
 @Injectable({
@@ -9,8 +8,7 @@ import { AcercaDe } from '../models/acercaDe';
 })
 export class AcercaDeService {
 
-  private apiServerUrl=environment.apiBaseUrl
-  
+  private apiServerUrl= 'https://serene-basin-54168.herokuapp.com/auth'  
   
   constructor(private http:HttpClient) { }
 

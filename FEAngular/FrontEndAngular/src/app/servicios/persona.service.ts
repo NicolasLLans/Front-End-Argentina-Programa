@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { Persona } from '../models/persona';
 
 @Injectable({
@@ -9,12 +8,12 @@ import { Persona } from '../models/persona';
 })
 export class PersonaService {
 
-  private apiServerUrl=environment.apiBaseUrl
+  private apiServerUrl= 'https://serene-basin-54168.herokuapp.com/auth'
 
   constructor(private http:HttpClient) { }
 
   public verPersona():Observable<Persona[]>{
-    return this.http.get<Persona[]>(`${this.apiServerUrl}/ver/personas`);
+    return this.http.get<Persona[]>(`${this.apiServerUrl}/personas/ver`);
   }
   public actualizar(persona: Persona):Observable<Persona>{
     return this.http.put<Persona>(`${this.apiServerUrl}/persona/actualizar`,persona);
