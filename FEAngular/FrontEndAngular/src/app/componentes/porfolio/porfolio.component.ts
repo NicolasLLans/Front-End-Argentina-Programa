@@ -10,7 +10,7 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 })
 export class PorfolioComponent implements OnInit {
 
-  private apiServerUrl= 'https://serene-basin-54168.herokuapp.com/'
+  private apiServerUrl= 'https://serene-basin-54168.herokuapp.com'
   public personas:Persona[]=[];
 
   constructor(private http:HttpClient, private personaService:PersonaService) { }
