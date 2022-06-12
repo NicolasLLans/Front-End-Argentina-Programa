@@ -50,7 +50,7 @@ export class LoginComponent implements OnInit {
       err => {
         this.isLogged = false;
         this.isLoginFail=true;
-        this.errMsj = err.error.message;
+        this.errMsj = err.error.menssage;
       
         
       }

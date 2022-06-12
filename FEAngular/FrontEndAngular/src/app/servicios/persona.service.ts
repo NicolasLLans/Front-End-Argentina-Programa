@@ -8,7 +8,7 @@ import { Persona } from '../models/persona';
 })
 export class PersonaService {
 
-  private apiServerUrl= 'https://serene-basin-54168.herokuapp.com/auth'
+  private apiServerUrl= 'https://serene-basin-54168.herokuapp.com'
 
   constructor(private http:HttpClient) { }
 

@@ -8,7 +8,7 @@ import { Skills } from '../models/skills';
 })
 export class SkillsService {
 
-  private apiServerUrl= 'https://serene-basin-54168.herokuapp.com/auth'
+  private apiServerUrl= 'https://serene-basin-54168.herokuapp.com'
 
   constructor(private http:HttpClient) { }
 

@@ -8,7 +8,7 @@ import { Experiencia } from '../models/experiencia';
 })
 export class ExperienciaService {
 
-  private apiServerUrl= 'https://serene-basin-54168.herokuapp.com/auth'
+  private apiServerUrl= 'https://serene-basin-54168.herokuapp.com'
   
   constructor(private http:HttpClient) { }
 

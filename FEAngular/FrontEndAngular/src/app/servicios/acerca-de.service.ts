@@ -8,7 +8,7 @@ import { AcercaDe } from '../models/acercaDe';
 })
 export class AcercaDeService {
 
-  private apiServerUrl= 'https://serene-basin-54168.herokuapp.com/auth'  
+  private apiServerUrl= 'https://serene-basin-54168.herokuapp.com'  
   
   constructor(private http:HttpClient) { }
 

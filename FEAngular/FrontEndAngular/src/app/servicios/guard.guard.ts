@@ -6,7 +6,7 @@ import { TokenService } from './token.service';
   providedIn: 'root'
 })
 export class GuardGuard implements CanActivate {
-  realRol: string;
+  realRol: string | undefined;
 
   constructor(
     private tokenService: TokenService,
@@ -14,7 +14,7 @@ export class GuardGuard implements CanActivate {
   ) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    const expectedRol = route.data.expectedRol;
+    const expectedRol = route.data['expectedRol'];
     const roles = this.tokenService.getAuthorities();
     this.realRol = 'user';
     roles.forEach(rol => {

@@ -7,7 +7,7 @@ import { Educacion } from '../models/educacion';
   providedIn: 'root'
 })
 export class EducacionService {
-  private apiServerUrl= 'https://serene-basin-54168.herokuapp.com/auth'
+  private apiServerUrl= 'https://serene-basin-54168.herokuapp.com'
   
   constructor(private http:HttpClient) { }
 
