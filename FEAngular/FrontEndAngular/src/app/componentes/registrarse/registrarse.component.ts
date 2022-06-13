@@ -17,6 +17,8 @@ export class RegistrarseComponent implements OnInit {
   password!: string;
   errMsj!: string;
   isLogged = false;
+  isRegister=false;
+  isRegisterFail=false;
 
   constructor(
     private tokenService: TokenService,
@@ -31,14 +33,18 @@ export class RegistrarseComponent implements OnInit {
   }
 
   onRegister(): void {
-    this.nuevoUsuario = new NuevoUsuario;
+    this.nuevoUsuario = new NuevoUsuario(this.nombre, this.nombreUsuario, this.email, this.password);
     this.authService.nuevo(this.nuevoUsuario).subscribe(
       _data => {
+        this.isRegister=true;
+        this.isRegisterFail=false;
 
         this.router.navigate(['/login']);
       },
       err => {
-        this.errMsj = err.error.mensaje;
+        this.isRegister=false;
+        this.isRegisterFail=true;
+        this.errMsj = err.error.menssage;
         
       }
     );

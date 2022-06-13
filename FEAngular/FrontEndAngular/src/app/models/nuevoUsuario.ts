@@ -1,7 +1,12 @@
-export class NuevoUsuario{
+export class NuevoUsuario {
     nombre!: string;
-    nombreusuario!: string;
+    nombreUsuario!: string;
     email!: string;
-    password!:string
-    authorities!: string[];
+    password!: string
+    constructor(nombre: string, nombreUsuario: string, email: string, password: string) {
+        this.nombre = nombre;
+        this.nombreUsuario = nombreUsuario;
+        this.email = email;
+        this.password = password;
+    }
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
@@ -15,7 +15,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModuleModule } from './material-module/material-module.module';
 import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
-import { authInterceptorProvider, InterceptorService } from './servicios/interceptor.service';
+import { authInterceptorProvider } from './servicios/interceptor.service';
 import { RegistrarseComponent } from './componentes/registrarse/registrarse.component';
 import { LoginComponent } from './componentes/login/login.component';
 
