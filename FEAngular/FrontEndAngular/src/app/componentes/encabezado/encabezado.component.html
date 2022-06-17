@@ -1,7 +1,8 @@
 <!--Encabezado -->
-<section class="card  m-3 p-2" *ngFor="let Persona of personas">
+<section class="card  m-3 p-2" >
     <img src="../../../assets/banner.png" alt="Programación Full Stack">
-    <div>
+    <div *ngFor="let Persona of personas">
+    <div >
         <img [src]="Persona.fotoPerfil" id="FotoDePerfil" class="col-auto img-responsive p-2 rounded-circle"  alt="Nicolás Lanselota">
         <button type="button"
         class="btn"
@@ -27,6 +28,7 @@
     <H5 class="m-2 mt-0">{{Persona.titulo}}</H5>
 
     <p class="card-text m-2 mt-0">{{Persona.descripcion}} <a href="https://wa.me/+541122613168?text=Hola,%20muchos%20gusto.%20En%20que%20puedo%20ayudarte" target="_blank">informacion de contacto</a></p>
+</div>
 </section>
 
 

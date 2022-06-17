@@ -15,19 +15,12 @@ export class EncabezadoComponent implements OnInit {
   public personas:Persona[]=[];
   formVisibility:boolean = false
   public editPersona:Persona | undefined
-  roles!: string[];
-  isAdmin = false;
+ 
 
   constructor(private personaService:PersonaService, private tokenService: TokenService ) { }
 
   ngOnInit(): void {
     this.verPersona();
-    this.roles = this.tokenService.getAuthorities();
-    this.roles.forEach(rol => {
-      if (rol === 'ROLE_ADMIN') {
-        this.isAdmin = true;
-      }
-    });
   }
   public verPersona():void{
     this.personaService.verPersona().subscribe({

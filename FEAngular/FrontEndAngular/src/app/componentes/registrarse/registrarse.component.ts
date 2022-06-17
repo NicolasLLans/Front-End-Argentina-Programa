@@ -16,7 +16,7 @@ export class RegistrarseComponent implements OnInit {
   email!: string;
   password!: string;
   errMsj!: string;
-  isLogged = false;
+ 
   isRegister=false;
   isRegisterFail=false;
 
@@ -27,9 +27,6 @@ export class RegistrarseComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    if (this.tokenService.getToken()) {
-      this.isLogged = true;
-    }
   }
 
   onRegister(): void {

@@ -15,16 +15,10 @@ export class NavBarComponent implements OnInit {
     private router: Router,) { }
 
   ngOnInit() {
-    if (this.tokenService.getToken()) {
-      this.isLogged = true;
-    } else {
-      this.isLogged = false;
-    }
+    this.isLogged=this.tokenService.isLogged();
   }
 
   onLogOut(): void {
     this.tokenService.logOut();
-    
-    this.router.navigate(['/login'])
   }
 }

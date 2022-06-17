@@ -13,18 +13,13 @@ export class PorfolioComponent implements OnInit {
 
   private apiServerUrl= 'https://serene-basin-54168.herokuapp.com/'
   public personas:Persona[]=[];
-  roles!: string[];
   isAdmin = false;
 
   constructor(private http:HttpClient, private personaService:PersonaService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
-    this.roles = this.tokenService.getAuthorities();
-    this.roles.forEach(rol => {
-      if (rol === 'ROLE_ADMIN') {
-        this.isAdmin = true;
-      }
-    });
+    this.verPersona();
+    this.isAdmin=this.tokenService.IsAdmin();
   }
 
   public verPersona():void{
