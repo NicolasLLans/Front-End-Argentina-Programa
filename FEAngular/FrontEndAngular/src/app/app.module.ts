@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
@@ -13,9 +13,8 @@ import { SkillsComponent } from './componentes/skills/skills.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModuleModule } from './material-module/material-module.module';
 import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
-import { authInterceptorProvider } from './servicios/interceptor.service';
+import { InterceptorService } from './servicios/interceptor.service';
 import { RegistrarseComponent } from './componentes/registrarse/registrarse.component';
 import { LoginComponent } from './componentes/login/login.component';
 
@@ -41,9 +40,10 @@ import { LoginComponent } from './componentes/login/login.component';
     FormsModule,
     FontAwesomeModule,
     BrowserAnimationsModule,
-    MaterialModuleModule
   ],
-  providers: [authInterceptorProvider],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass:InterceptorService, multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

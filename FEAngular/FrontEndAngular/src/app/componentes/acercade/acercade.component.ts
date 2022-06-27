@@ -13,7 +13,7 @@ import { __values } from 'tslib';
 export class AcercadeComponent implements OnInit {
   
   public acercaDe:AcercaDe[]=[]
-  formVisibility:boolean = false
+  public formVisibility = false
   public editAcercaDe:AcercaDe | undefined
 
   constructor(private acercaDeService:AcercaDeService) { }
@@ -55,6 +55,7 @@ export class AcercadeComponent implements OnInit {
 
   //boton de edicion de AcercaDe (Abre el formulario)
   editarTexto(){
+    console.log("llama a la funcion")
     this.formVisibility=true;
   }
 
