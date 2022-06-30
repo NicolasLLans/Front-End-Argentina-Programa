@@ -1,0 +1,16 @@
+#logoExperiencia{
+    width: 25%;
+    height: 25%;
+}
+@media (max-width:700px) {
+    #logoExperiencia{
+        width: 25%;
+        height: 25%;
+    }
+    h2{
+        font-size: 20px;
+    }
+    p{
+        font-size: 16px;
+    }
+}

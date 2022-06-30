@@ -5,12 +5,12 @@
             <img src="../../../assets/APLogo-20-20 1.png" alt="" width="120" height="39" class="d-inline-block align-text-center">
             <p class="text-light d-inline-block align-text-center" style="font-size: 12px;">#YoProgramo</p>
           </div>
-          <div class="containers bg-dark p-3">
-            <a href="https://github.com/NicolasLLans" class="m-1" target="_blank"><i class="bi bi-github col sticky-sm-top"></i></a>
-            <a href="" target="_blank" class="m-1"><i class="bi bi-youtube mr-2"></i></a>
+          <div class="containers d-flex align-items-center justify-content-end bg-dark p-3">
+            <a href="https://github.com/NicolasLLans" class="" target="_blank"><i class="bi bi-github col sticky-sm-top"></i></a>
+            <a href="" target="_blank" class=""><i class="bi bi-youtube"></i></a>
 
-            <button type="button" *ngIf="!isLogged" class="col btn btn-outline-light" routerLink="/login">Login <i class="bi bi-box-arrow-in-right sticky-sm-top" alt="login"></i></button>
-            <button type="button" class="col btn btn-outline-light" *ngIf="isLogged" 
+            <button type="button"  *ngIf="!isLogged" class="col btn btn-outline-light" routerLink="/login">Login <i class="bi bi-box-arrow-in-right sticky-sm-top" alt="login"></i></button>
+            <button type="button"  class="col btn btn-outline-light" *ngIf="isLogged" 
             (click)="onLogOut()">Cerrar <i class="bi bi-box-arrow-in-right sticky-sm-top" alt="loginOut"></i>
             </button>
           </div>

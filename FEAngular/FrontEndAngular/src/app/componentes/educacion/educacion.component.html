@@ -1,21 +1,20 @@
 <!--Educación -->
 <section class="card m-3 p-2">
-    <div class="row">
-        <H2 class="col m-2">Educación</H2>
-        <button type="button" class="btn  col-1 m-3" (click)="onOpenModal('add')">
-            <a class="nav-link">
-                <img src="../../../assets/bx-add-to-queue.svg" alt="agregar"><span class="sr-only"></span>
-            </a>
-        </button>
+    <div class="row m-1">
+        <H2 class="col d-flex align-items-center justify-content-start m-2">Educación</H2>
+
+        <a class="btn d-flex align-items-center justify-content-end col-1 m-3" (click)="onOpenModal('add')">
+            <img src="../../../assets/bx-add-to-queue.svg" alt="agregar"><span class="sr-only"></span>
+        </a>
     </div>
     <div id="main-container">
-        <ul class="container-fluid"  *ngFor="let Educacion of educaciones">
-            <li class="list-group-item">
-                <div class="row">
-                    <img [src]="Educacion.imgEdu" class="col-3  img-responsive" id="imgEdu" alt="Universidad de Buenos Aires">
+        <ul class="container-fluid text-center align-items-center justify-content-center m-2"  *ngFor="let Educacion of educaciones">
+            <li class="list-group-item d-flex w-100 align-items-center justify-content-center m-2">
+                <div class="row w-100">
+                    <img [src]="Educacion.imgEdu" class="col-3 text-center img-responsive" id="imgEdu" alt="Universidad de Buenos Aires">
                     <div class="col-7 text-center">
-                        <H2>{{Educacion.tituloEdu}}</H2>
-                        <p>{{Educacion.fechaEdu}} {{Educacion.descEdu}}</p>
+                        <H2 class="align-items-center justify-content-center">{{Educacion.tituloEdu}}</H2>
+                        <p class="align-items-center justify-content-center">{{Educacion.fechaEdu}} {{Educacion.descEdu}}</p>
                     </div>
                     <!--botones de edición-->
                     <div class="col-1">

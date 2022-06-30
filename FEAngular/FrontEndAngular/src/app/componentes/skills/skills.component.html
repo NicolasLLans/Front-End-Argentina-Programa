@@ -2,20 +2,23 @@
 <section class="card m-3 p-2">
     <div class="row">
         <div class="row m-1">
-            <H2 class="col">Hard skills & soft skills</H2>
-            <button (click)="onOpenModal('add')" class="btn col-1 m-2">
-            <a class="nav-link"><img src="../../../assets/bx-add-to-queue.svg" alt=""></a>
-        </button>
+            <H2 class="col d-flex align-items-center justify-content-start m-2">Hard skills & soft skills</H2>
+            <a class="btn d-flex align-items-center justify-content-end col-1 m-3" (click)="onOpenModal('add')">
+                <img src="../../../assets/bx-add-to-queue.svg" alt="agregar"><span class="sr-only"></span>
+            </a>
         </div>
     </div>
     <div  id="main-container">
-        <ul class="container-fluid" *ngFor="let Skills of skills">
-            <li class="list-group-item">
-                <h3 class="m-2">{{Skills.nombreSkill}}</h3>
-                <div class="row">
+        <ul class="container-fluid align-items-center justify-content-center m-2" *ngFor="let Skills of skills">
+            <div class="row">
+                <h3 class="m-2 col-6">{{Skills.nombreSkill}} </h3>
+            </div>
+            <li class="list-group-item d-flex align-items-center justify-content-center m-2">    
+                <div class="row w-100">
                     <div class="col-9 m-2">
+                        <p>{{Skills.porcentaje}}%</p>
                         <div class="progress">
-                            <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
+                            <div class="progress-bar progress-bar-striped bg-success align-items-center" role="progressbar"
                                 [style.width.%]="Skills.porcentaje" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>

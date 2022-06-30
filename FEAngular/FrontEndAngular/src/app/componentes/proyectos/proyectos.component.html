@@ -1,12 +1,10 @@
 <!--Proyectos -->
 <section class="card m-3 p-2">
-    <div class="row">
-         <H2 class="col m-2">Proyectos</H2>
-         <button type="button" (click)="onOpenModal('add')" class="btn col-1 m-3">
-            <a class="nav-link"><img src="../../../assets/bx-add-to-queue.svg" alt="agregar">
-            <span class="sr-only"></span>
-            </a>
-         </button>
+    <div class="row m-1">
+         <H2 class="col d-flex align-items-center justify-content-start m-2">Proyectos</H2>
+         <a class="btn d-flex align-items-center justify-content-end col-1 m-3" (click)="onOpenModal('add')">
+            <img src="../../../assets/bx-add-to-queue.svg" alt="agregar"><span class="sr-only"></span>
+        </a>
     </div>
     <div  id="main-container">
         <ul class="container-fluid" *ngFor="let Proyectos of proyectos">
