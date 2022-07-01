@@ -7,18 +7,18 @@
             <img src="../../../assets/bx-add-to-queue.svg" alt="agregar"><span class="sr-only"></span>
         </a>
     </div>
-    <div id="main-container">
-        <ul class="container-fluid d-flex align-items-center justify-content-center m-2"  *ngFor="let Experiencia of experiencias">
+    <div id="main-container d-flex align-items-center justify-content-center m-1">
+        <ul class="container-fluid "  *ngFor="let Experiencia of experiencias">
             <li class="list-group-item m-2"> 
                 <div class="row">
                     <img [src]="Experiencia.imgExp" id="logoExperiencia" class="col-3 img-responsive" alt="Fauna cosmetica natural">
-                <div class="col-7 text-center">
-                    <h2>{{Experiencia.tituloExp}}</h2>
-                    <p>{{Experiencia.fechaExp}} - {{Experiencia.descExp}}</p>
-                </div>
+                    <div class="col-7 text-center">
+                        <h2>{{Experiencia.tituloExp}}</h2>
+                        <p>{{Experiencia.fechaExp}} - {{Experiencia.descExp}}</p>
+                    </div>
                 <!--botones de edición-->
                    <div class="col-1">
-                      <a type="button" 
+                        <a type="button" 
                         class="btn"
                         (click)="onOpenModal('edit',Experiencia)"
                         >
