@@ -9,9 +9,9 @@
     </div>
     <div id="main-container">
         <ul class="container-fluid text-center align-items-center justify-content-center m-2"  *ngFor="let Educacion of educaciones">
-            <li class="list-group-item d-flex w-100 align-items-center justify-content-center m-2">
+            <li class="list-group-item d-flex w-100 align-items-center justify-content-center">
                 <div class="row w-100">
-                    <img [src]="Educacion.imgEdu" class="col-3 text-center img-responsive" id="imgEdu" alt="Universidad de Buenos Aires">
+                    <img [src]="Educacion.imgEdu" class="col-1 img-responsive" id="imgEdu" alt="Universidad de Buenos Aires">
                     <div class="col-7 text-center">
                         <H2 class="align-items-center justify-content-center">{{Educacion.tituloEdu}}</H2>
                         <p class="align-items-center justify-content-center">{{Educacion.fechaEdu}} {{Educacion.descEdu}}</p>

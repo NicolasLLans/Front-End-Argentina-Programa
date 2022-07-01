@@ -1,16 +1,25 @@
 #logoExperiencia{
-    width: 25%;
-    height: 25%;
+    width: 180px;
+    height: 100px;
+    object-fit: contain;
+    
 }
 @media (max-width:700px) {
     #logoExperiencia{
         width: 25%;
         height: 25%;
+        object-fit: contain;
     }
     h2{
-        font-size: 20px;
+        font-size: 18px;
     }
     p{
-        font-size: 16px;
+        font-size: 14px;
     }
+}
+section{
+    background-color: rgb(238, 238, 238, 0.060); 
+    backdrop-filter: blur(7px) opacity(60%);
+    color: #e7e7e7;
+    border: solid rgb(231, 231, 231, 0.18) 1px;
 }

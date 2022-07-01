@@ -1,1 +1,8 @@
-
+#bg{
+    background: radial-gradient(circle  at top, #000000, transparent),
+    radial-gradient(circle  at bottom,  #141414, transparent),
+    radial-gradient(ellipse  at left,  #141414, transparent);
+}
+a{
+    color: rgb(113, 182, 170);
+}
