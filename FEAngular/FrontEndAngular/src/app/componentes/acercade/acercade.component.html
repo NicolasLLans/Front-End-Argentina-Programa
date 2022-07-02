@@ -2,15 +2,9 @@
 <section class="card m-3 p-2">
     <div class="row m-1">
         <H2 class="card-title d-flex align-items-center justify-content-start m-2 col">Acerca de</H2>
-        <button 
-        type="button" 
-        class="btn col-1 m-3" 
-        (click)="editarTexto()"
-        >
-            <a class="text-center d-flex align-items-center justify-content-end">
-                <img src="../../../assets/bxs-edit-alt.svg" alt="editar">
-            </a>
-        </button>
+        <a class="btn d-flex align-items-center justify-content-end col-1" (click)="editarTexto()">
+            <img src="../../../assets/bx-add-to-queue.svg" alt="agregar"><span class="sr-only align-items-center"></span>
+        </a>
     </div>
     <div class="container-fluid m-2" *ngFor="let AcercaDe of acercaDe">
         <p class="card-text m-2 d-flex align-items-center justify-content-start">{{AcercaDe.texto}}</p>

@@ -4,6 +4,9 @@
     radial-gradient(ellipse  at left,  #141414, transparent);
 }
 a{
-    color: rgb(113, 182, 170);
+    color: rgb(118, 113, 182);
+}
+a:hover{
+    color: rgb(162, 156, 247);
 }
 

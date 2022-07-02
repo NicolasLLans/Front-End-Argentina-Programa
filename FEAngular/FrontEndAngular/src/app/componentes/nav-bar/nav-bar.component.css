@@ -3,32 +3,30 @@ i{
     font-size:20px;
     margin: 12px;
 }
-#col1{
-    width: 1px;
-}
 button:hover{
     background-color: transparent;
     color: aliceblue;
-    border-color: brown;
+    border-color: #9b94ffad;
 }
 #barraDeNav{
-    background: #141414f1;
-    
+    background: #14141496;
+    box-shadow:  0px 0px 15px #9b94ffad;
     backdrop-filter: blur(5px) ;
-    border-bottom: 1px solid rgba(94, 94, 95, 0.63);
+    border-bottom: 0.5px solid rgba(226, 228, 255, 0.87);
     position: sticky;
     top: 0px;
-    z-index: 1;
-    border-style: hidden;
+    z-index: 2;
+    height: 75px;
 }
 
 
-@media (max-width:700px) {
+@media (max-width:800px) {
     button{
         width: auto;
         height: auto;
         font-size: 0;
-        margin: auto
+        margin: auto;
+        border-color: #9b94ffda;
     }
     i{
         font-size:16px;
@@ -38,7 +36,7 @@ button:hover{
     }
     button:hover{
         background-color: transparent;
-        border-color: brown;
+        border-color: #9b94ffad;
     }
     img{
         width: 85px;

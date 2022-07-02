@@ -8,16 +8,16 @@
         </a>
     </div>
     <div id="main-container align-items-center justify-content-center m-1">
-        <ul class="container-fluid "  *ngFor="let Educacion of educaciones">
-            <li class="list-group-item m-2">
-                <div class="row">
+        <ul class="container-fluid mt-3 mb-3"  *ngFor="let Educacion of educaciones">
+            <li class="list-group-item align-self-center m-2">
+                <div class="row align-items-center">
                     <img [src]="Educacion.imgEdu" class="col-3 img-responsive" id="imgEdu1" alt="Universidad de Buenos Aires">
                     <div class="col-7 text-center">
                         <H2>{{Educacion.tituloEdu}}</H2>
                         <p>{{Educacion.fechaEdu}} {{Educacion.descEdu}}</p>
                     </div>
                     <!--botones de edición-->
-                    <div class="col-1">
+                    <div class="col-2">
                         <a type="button" 
                         class="btn" 
                         (click)="onOpenModal('edit',Educacion)"

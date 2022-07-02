@@ -1,14 +1,18 @@
 #FotoDePerfil{
     margin-top: -70px;
+    margin-bottom: 10px;
     width: 150px;
     height: 150px;
+    border: solid #fdfdfdef 2px;
+    box-shadow: 0px 0px 10px #2317c0;
 }
 #banner{
-    width: 100%;
+    width: auto;
     height: 135px;
     object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid rgb(231, 231, 231,0.18);
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: -1px -1px -10px #ff9355b0;
+    border: solid #474747ef 1px;
 }
 
 #datosPersonales{
@@ -35,6 +39,7 @@ section{
     background-color: rgb(238, 238, 238, 0.060); 
     backdrop-filter: blur(7px) opacity(60%);
     color: #e7e7e7;
-    border: solid rgb(231, 231, 231, 0.18) 1px;
-    
+    border: solid #fde6d8 0.2px;
+    box-shadow: inset 0px 0px 10px 0px #2317c0,0px 0px 5px 0px #2317c0, 0px 20px 40px 0px #beb9ff2c;
+    z-index: 1;
 }

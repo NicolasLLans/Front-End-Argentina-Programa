@@ -3,7 +3,9 @@
     height: 100px;
     object-fit: contain;
 }
-@media (max-width:700px) {
+
+
+@media (max-width:800px) {
     #imgEdu1{
         width: 25%;
         height: 25%;
@@ -16,9 +18,12 @@
         font-size: 14px;
     }
 }
+
 section{
     background-color: rgb(238, 238, 238, 0.060); 
     backdrop-filter: blur(7px) opacity(60%);
     color: #e7e7e7;
-    border: solid rgb(231, 231, 231, 0.18) 1px;
+    border: solid #fde6d8 0.2px;
+    box-shadow: inset 0px 0px 10px 0px #2317c0,0px 0px 5px 0px #2317c0, 0px 20px 40px 0px #beb9ff2c;
+    z-index: 1;
 }
