@@ -4,12 +4,13 @@
 <div *ngFor="let Persona of personas" class="m-3" id="datosPersonales">
     <div class="borde">
         <img [src]="Persona.fotoPerfil" id="FotoDePerfil" class="col-auto img-responsive rounded-circle"  alt="Nicolás Lanselota">
-        <button type="button"
-        class="btn"
+        <a type="button"
+        class=""
         (click)="editarTexto()">
-            <a><img src="../../../assets/bxs-edit-alt.svg" class="" alt=""></a>
-        </button>
+            <a><i class="bi-pencil bi-solid"></i></a>
+        </a>
     </div>
+    
     <!-- modal de edicion-->
     <div *ngIf="formVisibility">
         <form (ngSubmit)="onSubmit(Persona)">

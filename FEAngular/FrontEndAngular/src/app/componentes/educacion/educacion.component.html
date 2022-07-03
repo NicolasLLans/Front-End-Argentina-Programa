@@ -3,8 +3,8 @@
     <div class="row m-1">
         <H2 class="col d-flex align-items-center justify-content-start m-2">Educación</H2>
 
-        <a class="btn d-flex align-items-center justify-content-end col-1 m-3" (click)="onOpenModal('add')">
-            <img src="../../../assets/bx-add-to-queue.svg" alt="agregar"><span class="sr-only"></span>
+        <a type="button"class="d-flex align-items-center justify-content-end col-1 m-3" (click)="onOpenModal('add')">
+            <i class="bi bi-plus-square"></i>
         </a>
     </div>
     <div id="main-container align-items-center justify-content-center m-1">
@@ -19,16 +19,16 @@
                     <!--botones de edición-->
                     <div class="col-2">
                         <a type="button" 
-                        class="btn" 
+                        class="" 
                         (click)="onOpenModal('edit',Educacion)"
                         >
-                                <img src="../../../assets/bxs-edit-alt.svg" alt="edit">
+                        <i class="bi-pencil bi-solid"></i>
                         </a>
                         <a type="button" 
-                        class="btn" 
+                        class="" 
                         (click)="onOpenModal ('delete',Educacion)" 
                         >
-                            <img src="../../../assets/bx-x.svg" alt="x">
+                        <i class="bi bi-x-square"></i>
                         </a>
                     </div>
                 </div>

@@ -9,4 +9,8 @@ a{
 a:hover{
     color: rgb(162, 156, 247);
 }
+i{
+    color:#e7e7e7;
+    margin: 15px;
+}
 

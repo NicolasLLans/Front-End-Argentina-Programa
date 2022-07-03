@@ -2,8 +2,8 @@
 <section class="card m-3 p-2">
     <div class="row m-1">
          <H2 class="col d-flex align-items-center justify-content-start m-2">Proyectos</H2>
-         <a class="btn d-flex align-items-center justify-content-end col-1 m-3" (click)="onOpenModal('add')">
-            <img src="../../../assets/bx-add-to-queue.svg" alt="agregar"><span class="sr-only"></span>
+         <a  type="button" class="d-flex align-items-center justify-content-end col-1 m-3" (click)="onOpenModal('add')">
+            <i class="bi bi-plus-square"></i>
         </a>
     </div>
     <div  id="main-container">
@@ -16,11 +16,11 @@
                     </div>
                     <div class="col-1">
                         <a  type="button" 
-                        class="btn" 
-                        (click)="onOpenModal('edit',Proyectos)"><img src="../../../assets/bxs-edit-alt.svg" alt=""></a>
+                        class="" 
+                        (click)="onOpenModal('edit',Proyectos)"><i class="bi-pencil bi-solid"></i></a>
                         <a type="button" 
-                        class="btn" 
-                        (click)="onOpenModal ('delete',Proyectos)"><img src="../../../assets/bx-x.svg" alt=""></a>
+                        class="" 
+                        (click)="onOpenModal ('delete',Proyectos)"><i class="bi-x-square bi-solid"></i></a>
                     </div>
                 </div> 
             </li>
