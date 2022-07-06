@@ -1,13 +1,15 @@
 <!--Acerca de -->
 <section class="card m-3 p-2">
-    <div class="row m-1">
-        <H2 class="card-title d-flex align-items-center justify-content-start m-2 col">Acerca de</H2>
-        <a type="button" class=" d-flex align-items-center justify-content-end col-1" (click)="editarTexto()">
-            <i class="bi-pencil bi-solid"></i>
-        </a>
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <H2 class="card-title d-flex align-items-center justify-content-start m-2 col">Acerca de</H2>
+            <a type="button" class=" d-flex align-items-center justify-content-end col-1 m-1 mb-1" (click)="editarTexto()">
+                <i class="bi-pencil bi-solid"></i>
+            </a>
+        </div>
     </div>
-    <div class="container-fluid m-2" *ngFor="let AcercaDe of acercaDe">
-        <p class="card-text m-2 d-flex align-items-center justify-content-start">{{AcercaDe.texto}}</p>
+    <div class="container-fluid" *ngFor="let AcercaDe of acercaDe">
+        <p class="card-text m-2 mt-0 d-flex align-items-center justify-content-start">{{AcercaDe.texto}}</p>
    
 
     <div class="card mt-4" *ngIf="formVisibility" >

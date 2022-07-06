@@ -1,10 +1,12 @@
 <!--Proyectos -->
 <section class="card m-3 p-2">
-    <div class="row m-1">
-         <H2 class="col d-flex align-items-center justify-content-start m-2">Proyectos</H2>
-         <a  type="button" class="d-flex align-items-center justify-content-end col-1 m-3" (click)="onOpenModal('add')">
-            <i class="bi bi-plus-square"></i>
-        </a>
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <H2 class="col d-flex align-items-center justify-content-start m-2">Proyectos</H2>
+            <a  type="button" class="d-flex align-items-center justify-content-end col-1 m-2" (click)="onOpenModal('add')">
+                <i class="bi bi-plus-square"></i>
+            </a>
+        </div>
     </div>
     <div  id="main-container">
         <ul class="container-fluid" *ngFor="let Proyectos of proyectos">
@@ -14,7 +16,7 @@
                         <H3><a [href]="Proyectos.link" >{{Proyectos.nombre}}</a></H3>
                         <p>{{Proyectos.descripcion}}</p>            
                     </div>
-                    <div class="col-1">
+                    <div class="col-2">
                         <a  type="button" 
                         class="" 
                         (click)="onOpenModal('edit',Proyectos)"><i class="bi-pencil bi-solid"></i></a>

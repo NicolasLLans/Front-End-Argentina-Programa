@@ -5,4 +5,5 @@ export interface Persona{
    titulo:String;
    descripcion:String;
    fotoPerfil:String;
+   banner:String;
 }

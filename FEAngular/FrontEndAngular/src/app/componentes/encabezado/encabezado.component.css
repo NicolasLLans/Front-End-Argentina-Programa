@@ -1,5 +1,5 @@
 #FotoDePerfil{
-    margin-top: -70px;
+    margin-top: -100px;
     margin-bottom: 10px;
     width: 150px;
     height: 150px;
@@ -8,7 +8,7 @@
 }
 #banner{
     width: auto;
-    height: 135px;
+    height: 200px;
     object-fit: cover;
     border-radius: 5px 5px 0px 0px;
     box-shadow: -1px -1px -10px #ff9355b0;
@@ -28,16 +28,18 @@
         font-size: 18px;
     }
     h5{
-        font-size: 17px;
+        font-size: 14px;
     }
     p{
-        font-size: 16px;
+        font-size: 12px;
     }
-    
+    #banner{
+        height: 135px;
+    }
 }
 section{
     background-color: rgb(238, 238, 238, 0.060); 
-    backdrop-filter: blur(7px) opacity(60%);
+    backdrop-filter: blur(10px) ;
     color: #e7e7e7;
     border: solid #fde6d8 0.2px;
     box-shadow: inset 0px 0px 10px 0px #2317c0,0px 0px 5px 0px #2317c0, 0px 20px 40px 0px #beb9ff2c;

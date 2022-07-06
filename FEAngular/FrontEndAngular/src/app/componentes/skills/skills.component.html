@@ -1,9 +1,9 @@
 <!--hard skill & soft Skills -->
 <section class="card m-3 p-2">
-    <div class="row">
-        <div class="row m-1">
+    <div class="container-fluid">
+        <div class="row align-items-center">
             <H2 class="col d-flex align-items-center justify-content-start m-2">Hard skills & soft skills</H2>
-            <a  type="button" class=" d-flex align-items-center justify-content-end col-1 m-3" (click)="onOpenModal('add')">
+            <a  type="button" class=" d-flex align-items-center justify-content-end col-1 m-2" (click)="onOpenModal('add')">
                 <i class="bi bi-plus-square"></i>
             </a>
         </div>
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     <!--botones de edición-->
-                    <div class="col-1">
+                    <div class="col-2">
                         <a type="button" class="" (click)="onOpenModal('edit',Skills)"><i class="bi-pencil bi-solid"></i></a>
                         <a type="button" class="" (click)="onOpenModal('delete',Skills)"><i class="bi-x-square bi-solid"></i></a>
                     </div>
