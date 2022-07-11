@@ -1,6 +1,6 @@
 <!--Encabezado -->
-<section class="card  m-3" >
-    <img src="../../../assets/banner.png" class="m-3" alt="Programación Full Stack" id="banner">
+<section class="card  m-3" *ngFor="let Persona of personas" >
+    <img [src]="Persona.banner" class="m-3" alt="Programación Full Stack" id="banner">
 <div *ngFor="let Persona of personas" class="m-3" id="datosPersonales">
     <div class="borde">
         <img [src]="Persona.fotoPerfil" id="FotoDePerfil" class="col-auto img-responsive rounded-circle"  alt="Nicolás Lanselota">
@@ -14,13 +14,23 @@
     <!-- modal de edicion-->
     <div *ngIf="formVisibility">
         <form (ngSubmit)="onSubmit(Persona)">
+                <p>Imagen de perfil</p>
                 <input type="text" 
                 [(ngModel)]="Persona.fotoPerfil"
                 name="imagen"
                 placeholder="URL de la imagen"
                 class="form-control">
+                <p>Imagen del banner</p>
+                <input type="text" 
+                [(ngModel)]="Persona.banner"
+                name="banner"
+                placeholder="URL del banner"
+                class="form-control">
                 <button type="submit" class="btn m-1 btn-primary">
                     Guardar cambios
+                </button>
+                <button type="close" class="btn m-1 btn-primary">
+                    Cerrar
                 </button>
         </form>                  
     </div>
