@@ -10,7 +10,7 @@
     width: auto;
     height: 200px;
     object-fit: cover;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 12px 12px 0px 0px;
     box-shadow: -1px -1px -10px #ff9355b0;
     border: solid #474747ef 1px;
 }
@@ -36,6 +36,7 @@
     #banner{
         height: 135px;
     }
+   
 }
 section{
     background-color: rgb(238, 238, 238, 0.060); 
@@ -44,4 +45,5 @@ section{
     border: solid #fde6d8 0.2px;
     box-shadow: inset 0px 0px 10px 0px #2317c0,0px 0px 5px 0px #2317c0, 0px 20px 40px 0px #beb9ff2c;
     z-index: 1;
+    border-radius: 24px;
 }

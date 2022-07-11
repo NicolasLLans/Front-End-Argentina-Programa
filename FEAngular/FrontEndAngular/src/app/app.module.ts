@@ -17,6 +17,7 @@ import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
 import { InterceptorService } from './servicios/interceptor.service';
 import { RegistrarseComponent } from './componentes/registrarse/registrarse.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { RoleDirective } from './directivas/role.directive';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { LoginComponent } from './componentes/login/login.component';
     ProyectosComponent,
     PorfolioComponent,
     RegistrarseComponent,
-    LoginComponent
+    LoginComponent,
+    RoleDirective
   ],
   imports: [
     BrowserModule,

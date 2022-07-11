@@ -3,4 +3,5 @@ export interface Proyectos{
     nombre:String;
     descripcion:String;
     link:String;
+    fecha:number;
 }

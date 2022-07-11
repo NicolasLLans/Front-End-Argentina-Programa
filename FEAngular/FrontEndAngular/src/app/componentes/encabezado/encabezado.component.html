@@ -1,6 +1,6 @@
 <!--Encabezado -->
 <section class="card  m-3" >
-    <img src="../../../assets/banner.png" class="m-2" alt="Programación Full Stack" id="banner">
+    <img src="../../../assets/banner.png" class="m-3" alt="Programación Full Stack" id="banner">
 <div *ngFor="let Persona of personas" class="m-3" id="datosPersonales">
     <div class="borde">
         <img [src]="Persona.fotoPerfil" id="FotoDePerfil" class="col-auto img-responsive rounded-circle"  alt="Nicolás Lanselota">
@@ -8,7 +8,7 @@
         class=""
         (click)="editarTexto()">
             <a><i class="bi-pencil bi-solid"></i></a>
-        </a>
+        </a>  
     </div>
     
     <!-- modal de edicion-->

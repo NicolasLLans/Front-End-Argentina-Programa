@@ -2,6 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AcercaDe } from 'src/app/models/acercaDe';
 import { AcercaDeService } from 'src/app/servicios/acerca-de.service';
+import { TokenService } from 'src/app/servicios/token.service';
 import { __values } from 'tslib';
 
 
@@ -16,7 +17,7 @@ export class AcercadeComponent implements OnInit {
   public formVisibility = false
   public editAcercaDe:AcercaDe | undefined
 
-  constructor(private acercaDeService:AcercaDeService) { }
+  constructor(private acercaDeService:AcercaDeService, private tokenService:TokenService) { }
  
 
   ngOnInit(): void {
@@ -55,8 +56,13 @@ export class AcercadeComponent implements OnInit {
 
   //boton de edicion de AcercaDe (Abre el formulario)
   editarTexto(){
-    console.log("llama a la funcion")
+    console.log("funciona")
+  if(this.tokenService.IsAdmin()){
     this.formVisibility=true;
+  }else{
+    this.formVisibility=false;
+    return alert("Sólo el administrador puede editar");
+  }
   }
 
     

@@ -51,7 +51,14 @@ export class EncabezadoComponent implements OnInit {
 //boton de edicion de AcercaDe (Abre el formulario)
 editarTexto(){
   console.log("funciona")
-  this.formVisibility=true;
+  if(this.tokenService.IsAdmin()){
+    this.formVisibility=true;
+  }else{
+    this.formVisibility=false;
+    return alert("Sólo el administrador puede editar");
+  }
 }
+
+
 
 }

@@ -2,14 +2,14 @@
     background: radial-gradient(circle  at top, #000000, transparent),
     radial-gradient(circle  at bottom,  #141414, transparent),
     radial-gradient(ellipse  at left,  #141414, transparent);
-    background-image: url("https://acortar.link/rN6wGC");
+    background-image: url("https://acortar.link/qRsLpB");
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment:fixed;
     
 }
 a{
-    color: rgb(118, 113, 182);
+    color: rgb(100, 199, 105);
 }
 a:hover{
     color: rgb(162, 156, 247);
