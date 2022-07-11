@@ -53,7 +53,7 @@ aria-hidden="true"
             <div class="modal-header">
                 <h5 class="modal-title" id="addExperienciaModalLabel">Añadir Educacion</h5>
                 <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"> &times;</span>
+                    <span aria-hidden="true"> </span>
                 </button>
             </div>
             <div class="modal-body">
@@ -117,7 +117,7 @@ aria-hidden="true"
                     {{editarExperiencia?.tituloExp}}
                 </h5>
                 <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"> &times;</span>
+                    <span aria-hidden="true"> </span>
                 </button>
             </div>
             <div class="modal-body">
@@ -179,7 +179,7 @@ aria-hidden="true"
                 <h5 class="modal-title" id="deleteExperienciaModalLabel">borrar experiencia
                 </h5>
                 <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"> &times;</span>
+                    <span aria-hidden="true"></span>
                 </button>
             </div>
             <div class="modal-body">
@@ -203,7 +203,7 @@ aria-hidden="true"
 </div>
 
 <!-- alerta no hay experiencias -->
-<div *ngIf="experiencias?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
+<div *ngIf="experiencias?.length == 0" class="col-lg-12 col-md-12 col-xl-12 m-3">
     <div class="alert alert-info" role="alert">
         <h4 class="alert-heading">no hay experiencias</h4>
         <p>experiencias no encontradas</p>

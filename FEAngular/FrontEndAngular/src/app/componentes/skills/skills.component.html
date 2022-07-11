@@ -42,7 +42,7 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="addSkillsModalLabel">Añadir Skills</h5>
                 <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"> &times;</span>
+                    <span aria-hidden="true"> </span>
                 </button>
             </div>
             <div class="modal-body">
@@ -98,7 +98,7 @@ aria-hidden="true"
                     {{editarSkills?.nombreSkill}}
                 </h5>
                 <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"> &times;</span>
+                    <span aria-hidden="true"> </span>
                 </button>
             </div>
             <div class="modal-body">
@@ -154,12 +154,12 @@ aria-hidden="true"
                 <h5 class="modal-title" id="deleteSkillsModalLabel">Borrar Skills
                 </h5>
                 <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"> &times;</span>
+                    <span aria-hidden="true"> </span>
                 </button>
             </div>
             <div class="modal-body">
                 <p>
-                    Estas seguro de que quieres eliminar?
+                    Estas seguro de que quieres eliminar,
                     {{ deleteSkills?.nombreSkill }}?
                 </p>
                         <div class="modal-footer">
@@ -178,7 +178,7 @@ aria-hidden="true"
 </div>
 
 <!-- alerta no hay educaciones -->
-<div *ngIf="skills?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
+<div *ngIf="skills?.length == 0" class="col-lg-12 col-md-12 col-xl-12 m-3">
     <div class="alert alert-info" role="alert">
         <h4 class="alert-heading">No hay Skills</h4>
         <p>Skills no encontradas</p>
