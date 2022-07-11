@@ -44,4 +44,16 @@ export class LoginComponent implements OnInit {
       }
     );
   }
+
+  onLoginInvitado(): void {
+    this.loginUsuario = new LoginUsuario("user", "user");
+    this.authService.login(this.loginUsuario).subscribe(
+      data => {
+        
+        this.tokenService.setToken(data.token);
+       
+      
+        this.router.navigate(['/porfolio']);
+      },)
+  }
   }
