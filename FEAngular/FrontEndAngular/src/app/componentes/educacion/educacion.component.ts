@@ -37,6 +37,9 @@ export class EducacionComponent implements OnInit {
     public onOpenModal(mode:String, educacion?: Educacion):void{
       const container=document.getElementById('main-container');
       const button=document.createElement('button');
+      if(!this.tokenService.IsAdmin()){
+        alert("Sólo los administradores pueden editar")
+      }else{
       button.style.display='none';
       button.setAttribute('data-toggle','modal');
       if(mode==='add'){
@@ -50,6 +53,7 @@ export class EducacionComponent implements OnInit {
       }
       container?.appendChild(button); 
       button.click();
+    }
       console.log("llama a la funcion");
     }
 

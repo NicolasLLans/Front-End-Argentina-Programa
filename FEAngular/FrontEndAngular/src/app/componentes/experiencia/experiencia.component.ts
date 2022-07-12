@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Experiencia } from 'src/app/models/experiencia';
 import { ExperienciaService } from 'src/app/servicios/experiencia.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -15,7 +16,7 @@ export class ExperienciaComponent implements OnInit {
   public editarExperiencia:Experiencia | undefined;
   public deleteExperiencia:Experiencia | undefined;
 
-  constructor(private experienciaService:ExperienciaService ) { }
+  constructor(private experienciaService:ExperienciaService, private tokenService:TokenService) { }
 
   ngOnInit(): void {
     this.obtenerExperiencia();
@@ -34,19 +35,24 @@ export class ExperienciaComponent implements OnInit {
   public onOpenModal(mode:String, experiencia?: Experiencia):void{
     const container=document.getElementById('main-container');
     const button=document.createElement('button');
-    button.style.display='none';
-    button.setAttribute('data-toggle','modal');
-    if(mode==='add'){
-      button.setAttribute('data-target','#addExperienciaModal');
-    }else if(mode==='delete'){
-      this.deleteExperiencia=experiencia;
-      button.setAttribute('data-target','#deleteExperienciaModal');
-    }else if(mode==='edit'){
-      this.editarExperiencia=experiencia;
-      button.setAttribute('data-target','#editExperienciaModal');
+    if(!this.tokenService.IsAdmin()){
+      alert("Sólo los administradores pueden editar")
+    }else{
+      button.style.display='none';
+      button.setAttribute('data-toggle','modal');
+      if(mode==='add'){
+        button.setAttribute('data-target','#addExperienciaModal');
+      }else if(mode==='delete'){
+        this.deleteExperiencia=experiencia;
+        button.setAttribute('data-target','#deleteExperienciaModal');
+      }else if(mode==='edit'){
+        this.editarExperiencia=experiencia;
+        button.setAttribute('data-target','#editExperienciaModal');
+      }
+      container?.appendChild(button); 
+      button.click();
     }
-    container?.appendChild(button); 
-    button.click();
+    
     console.log("llama a la funcion");
   }
 

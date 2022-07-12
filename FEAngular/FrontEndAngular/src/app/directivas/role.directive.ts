@@ -1,4 +1,4 @@
-import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 import { TokenService } from '../servicios/token.service';
 
 @Directive({
@@ -8,20 +8,16 @@ export class RoleDirective {
 
 
   constructor(
-    private temlateRef: TemplateRef<any>, 
-    private viewContainer: ViewContainerRef, 
+    private readonly elRef: ElementRef,
     private tokenService: TokenService 
     ) { }
 
-  ngOnInit():void{
-
-  }  
-
- @Input()
- set appRole(val: string){ 
-  console.log(val= val + this.tokenService.IsAdmin())
-  if (this.tokenService.IsAdmin()){
-    this.viewContainer.createEmbeddedView(this.temlateRef);
+ @HostListener('click', ['$event'])
+ appRole(event: Event): void{ 
+  if (!this.tokenService.IsAdmin()){
+    event.target
+    alert("sólo administradores pueden editar")
   }
+  
  }   
 }

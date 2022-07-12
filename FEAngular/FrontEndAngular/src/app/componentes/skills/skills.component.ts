@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Skills } from 'src/app/models/skills';
 import { SkillsService } from 'src/app/servicios/skills.service';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-skills',
@@ -15,7 +16,7 @@ export class SkillsComponent implements OnInit {
   public editarSkills:Skills | undefined;
   public deleteSkills:Skills | undefined;
 
-  constructor(private skillsService:SkillsService ) { }
+  constructor(private skillsService:SkillsService, private tokenService:TokenService) { }
 
   ngOnInit( ): void {
     this.obtenerSkills();
@@ -35,7 +36,10 @@ export class SkillsComponent implements OnInit {
   public onOpenModal(mode:String, skills?: Skills):void{
     const container=document.getElementById('main-container');
     const button=document.createElement('button');
-    button.style.display='none';
+    if(!this.tokenService.IsAdmin()){
+      alert("Sólo los administradores pueden editar")
+    }else{
+      button.style.display='none';
     button.setAttribute('data-toggle','modal');
     if(mode==='add'){
       button.setAttribute('data-target','#addSkillsModal');
@@ -48,6 +52,8 @@ export class SkillsComponent implements OnInit {
     }
     container?.appendChild(button); 
     button.click();
+    }
+    
     console.log("llama a la funcion");
   }
 
