@@ -1,12 +1,12 @@
-     <!--Navbar-->
-     <div class="container-fluid " id="barraDeNav" >
-        <div class="row align-items-center">
-          <div class="col " href="#">
-            <img src="../../../assets/APLogo-20-20 1.png" alt="" width="120" height="39" class="align-text-center mt-2">
-            <p class="text-light inline-block" style="font-size: 10px;">#YoProgramo</p>
-          </div>
-          <div class="col">
-            <div class="position-absolute top-50 start-50 translate-middle">
+<!--Navbar-->
+<div class="container-fluid" id="barraDeNav" >
+  <div class="row pt-2">
+    <div class="col d-flex align-items-center justify-content-start" href="#">
+            <img src="../../../assets/APLogo-20-20 1.png" alt="" width="120" height="39" class="">
+            <p class="text-light d-flex align-items-center">#YoProgramo</p>
+    </div>
+    <div class="col-3 d-flex align-items-center justify-content-end">
+            
               <a href="https://github.com/NicolasLLans" class="" target="_blank">
                 <i class="bi bi-github col sticky-sm-top"></i>
               </a>
@@ -16,17 +16,17 @@
               <a href="https://www.linkedin.com/in/nicol%C3%A1s-lautaro-lanselota-26a018137/" target="_blank" class="mr-2">
                 <i class="bi bi-linkedin"></i>
               </a>
-            </div>
-          </div>
-          <div class="col  ">
-            <div class="position-absolute top-0 end-0">
-              <button type="button"  *ngIf="!isLogged" class="text-center m-3 " 
+            
+    </div>
+    <div class="col-3 d-flex align-items-center justify-content-end ">
+            
+              <button type="button"  *ngIf="!isLogged" class="text-center " 
               routerLink="/login" id="boton">Login <i class="bi bi-box-arrow-in-left sticky-sm-top"  alt="login"></i>
               </button>
-              <button type="button"  id="boton" class="text-center m-3" *ngIf="isLogged" 
+              <button type="button"  id="boton" class="text-center" *ngIf="isLogged" 
               (click)="onLogOut()">Cerrar <i class="bi bi-box-arrow-in-right sticky-sm-top"  alt="loginOut"></i>
               </button>
-            </div>
-          </div>
-        </div>
+            
     </div>
+  </div>
+</div>
