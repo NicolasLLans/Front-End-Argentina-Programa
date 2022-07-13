@@ -8,13 +8,13 @@
             </a>
         </div>
     </div>
-    <div id="main-container align-items-center justify-content-center m-1">
-        <ul class="container-fluid mt-3 mb-3"  *ngFor="let Educacion of educaciones">
-            <li class="list-group-item align-self-center m-2">
-                <div class="row align-items-center">
+    <div id="main-container ">
+        <ul class="container-fluid align-items-center justify-content-center p-3"  *ngFor="let Educacion of educaciones">
+            <li class="list-group-item w-100">
+                <div class="row align-items-center justify-content-center">
                     <img [src]="Educacion.imgEdu" class="col-3 img-responsive" id="imgEdu1" alt="Universidad de Buenos Aires">
-                    <div class="col-7 text-center">
-                        <H2>{{Educacion.tituloEdu}}</H2>
+                    <div class="col-7">
+                        <H3>{{Educacion.tituloEdu}}</H3>
                         <p>{{Educacion.fechaEdu}} {{Educacion.descEdu}}</p>
                     </div>
                     <!--botones de edición-->
