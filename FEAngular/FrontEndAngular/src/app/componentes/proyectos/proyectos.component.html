@@ -13,7 +13,7 @@
             <li class="list-group-item">
                 <div class="row">
                     <div class="col-9 m-2">
-                        <H3><a [href]="Proyectos.link" >{{Proyectos.nombre}}</a></H3>
+                        <H3><a [href]="Proyectos.link" target="_blank">{{Proyectos.nombre}}</a></H3>
                         <p>- {{Proyectos.fecha}}</p>
                         <p>{{Proyectos.descripcion}}</p>            
                     </div>
@@ -22,7 +22,7 @@
                         class="" 
                         (click)="onOpenModal('edit',Proyectos)"><i class="bi-pencil bi-solid"></i></a>
                         <a type="button" 
-                        class="" 
+                        class="pt-2" 
                         (click)="onOpenModal ('delete',Proyectos)"><i class="bi-x-square bi-solid"></i></a>
                     </div>
                 </div> 
