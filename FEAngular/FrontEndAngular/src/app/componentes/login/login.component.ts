@@ -54,6 +54,12 @@ export class LoginComponent implements OnInit {
        
       
         this.router.navigate(['/porfolio']);
-      },)
+      },
+      err => {
+        this.errMsj = err.error.menssage;
+      this.isLoginFail=true;
+        
+      }
+      );
   }
   }
